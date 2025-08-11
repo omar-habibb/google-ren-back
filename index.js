@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Route to send subscription data to Google Sheets
-app.post("/subscribe", async (req, res) => {
+app.post("/renew", async (req, res) => {
   try {
     const payload = req.body;
 
@@ -30,3 +30,4 @@ app.post("/subscribe", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
